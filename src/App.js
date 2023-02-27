@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 
 function App() {
     const [buttonColor, setButtonColor] = useState("red");
@@ -9,19 +9,19 @@ function App() {
     return (
         <div>
             <button
-                style={{ backgroundColor: buttonColor, color: "white" }}
+                style={{backgroundColor: buttonColor, color: "white"}}
                 onClick={() => setButtonColor(newButtonColor)}
                 disabled={disabled}
             >
                 Change to {newButtonColor}
             </button>
-            <br />
+            <br/>
             <input
                 type="checkbox"
                 id="enable-button-checkbox"
                 defaultChecked={disabled}
-                onChange={(e) => setdisabled(e.target.checked)}
-            />
+                onChange={(e) => setdisabled(e.target.checked)}/>
+            <label htmlFor={"enable-button-checkbox"}>Disable button</label>
         </div>
     );
 }
